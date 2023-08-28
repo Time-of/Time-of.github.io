@@ -1,5 +1,7 @@
 ---
+title: 첫 글 테스트
 author: 이성수
+date: 2023-08-29 00:49:11 +0800
 categories: [뻘글]
 tags: [뻘글]
 ---
