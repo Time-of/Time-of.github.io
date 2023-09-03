@@ -20,6 +20,10 @@ layout: compress
   {% include head.html %}
 
   <body>
+	{% if page.use_math %}
+		{% include mathjax_support.html %}
+	{% endif %}
+  
     {% include sidebar.html lang=lang %}
 
     <div id="main-wrapper" class="d-flex justify-content-center">
