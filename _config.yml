@@ -79,9 +79,20 @@ toc: true
 
 comments:
   active: utterances
+  disqus:
+    short-name:
   utterances:
     repo: Time-of/Blog-Comments
     issue_term: pathname
+  giscus:
+    repo:
+    repo-id:
+    category:
+    category_id:
+    mapping:
+    input_position:
+    lang:
+    reactions_enabled:
 
 # Self-hosted static assets, optional › https://github.com/cotes2020/chirpy-static-assets
 assets:
