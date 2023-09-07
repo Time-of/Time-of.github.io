@@ -35,7 +35,7 @@ copyright:
     link: https://creativecommons.org/licenses/by/4.0/
 
   # Displayed in the footer
-  brief: Some rights reserved.
+  brief: Powered by jekyll and chirpy.
   verbose: >-
     명시되지 않는 한 이 사이트의 블로그 게시물은 작성자의
     Creative Commons Attribution 4.0 International(CC BY 4.0) 라이선스에 따라 사용이 허가되었습니다.
@@ -46,7 +46,7 @@ not_found:
   statment: 존재하지 않는 URL입니다. /_ \
 
 notification:
-  update_found: 새 포스트가 올라온 것 같아요!
+  update_found: 새 업데이트가 있는 것 같아요!
   update: 지금 확인하기
 
 # ----- Posts related labels -----
