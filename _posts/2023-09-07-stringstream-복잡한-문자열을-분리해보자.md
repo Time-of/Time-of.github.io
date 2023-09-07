@@ -210,6 +210,7 @@ std::stringstream ss("100");
 int num;
 ss >> num; // num은 이제 100이 된다.
 num *= 3;
+ss.str("");
 ss.clear();
 ss << num;
 std::string Result = ss.str();
@@ -254,6 +255,52 @@ if (ss.bad())
 ```
 위 코드를 실행하면 `"오류 발생!"`이 출력된다.  
 **badbit**는 스트림에서 더 이상 연산을 수행할 수 없는 오류 발생 시 stringstream에 의해 설정된다.  
+<br>
+
+## 성능 고려 사항
+`stringstream`은 기능이 다양하고 사용하기 편리하나, 성능에 미치는 영향을 이해하는 것이 중요하다.  
+`stringstream` 객체를 생성, 사용, 소멸하는 데 드는 비용은 특히 성능이 중요한 경우 프로그램의 효율성에 영향을 줄 수 있다.  
+<br>
+### 오버헤드
+`stringstream` 객체 생성 및 소멸에는 동적 메모리 할당 및 해제가 필요하므로, 약간의 오버헤드가 발생한다.  
+루프문 내에서 객체를 생성하려 한다면, 이 때문에 성능에 영향을 줄 수 있다.  
+```cpp
+// 반드시 '지양'할 것.
+// 매 반복 시마다 오버헤드가 발생한다
+for (const string& str : strings)
+{
+	std::stringstream ss;
+	ss < str;
+	// ...
+}
+```
+<br>
+
+### 문자열 연산 효율
+`stringstream`은 많은 문자열 연산을 단순화하나, 항상 가장 효율적인 선택은 아니다.  
+간단한 연결의 경우 문자열에 대한 직접적인 연산이 더 빠를 수 있다.  
+```cpp
+std::stringstream ss;
+ss << "Hello " << "World";
+// 단순 연산이 더 빠를 수 있다
+std::string str1 = "Hello" + "World";
+```
+<br>
+
+### 재사용하기
+`stringstream`은 생성 및 소멸 시 약간의 오버헤드가 발생한다.  
+객체를 생성/소멸하는 대신에, 초기화를 진행하여 재사용할 수 있다:  
+```cpp
+std::stringstream ss;
+for (int i = 0; i < 10000; ++i)
+{
+	ss.str("");
+	ss.clear();
+	ss < i;
+	// ...
+}
+```
+이렇게 함으로 매 반복에서 `stringstream`이 재사용되므로 생성 및 삭제로부터 오는 오버헤드를 피할 수 있다.  
 <br>
 
 
