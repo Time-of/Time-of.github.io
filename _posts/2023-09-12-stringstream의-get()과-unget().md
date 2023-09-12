@@ -2,7 +2,7 @@
 categories: [C++, 문자열]
 tags: [C++, 문자열, string]
 use_math: true
-title: "stringstream의 get()과 unget()"
+title: "stringstream의 get()과 unget()에 대하여"
 ---
 # unget()
 ```cpp
