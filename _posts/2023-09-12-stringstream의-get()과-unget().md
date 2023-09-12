@@ -2,6 +2,7 @@
 categories: [C++, 문자열]
 tags: [C++, 문자열, string]
 use_math: true
+title: "{{ page.title | capitalize }}"
 ---
 # unget()
 ```cpp
