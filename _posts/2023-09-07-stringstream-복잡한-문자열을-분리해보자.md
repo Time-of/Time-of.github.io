@@ -2,7 +2,7 @@
 categories: [C++, 문자열]
 tags: [C++, 문자열, string]
 use_math: true
-title = "stringstream 복잡한 문자열을 분해해보자"
+title: "stringstream: 복잡한 문자열을 분해해보자"
 ---
 # 파싱(Parsing)
 파싱이란, 문장의 구성 성분을 분해하여 재조립해 원하는 데이터를 빼내는 일련의 과정.  
