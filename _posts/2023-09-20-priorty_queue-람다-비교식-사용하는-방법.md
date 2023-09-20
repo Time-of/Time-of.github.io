@@ -2,6 +2,7 @@
 categories: [C++, STL]
 tags: [C++, STL]
 use_math: true
+title: "[C++] priority_queue에서 람다 비교식을 사용하는 방법"
 ---
 [stl - C++ priority_queue with lambda comparator error - Stack Overflow](https://stackoverflow.com/questions/5807735/c-priority-queue-with-lambda-comparator-error)
 <br>
